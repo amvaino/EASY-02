@@ -1,0 +1,26 @@
+.page {
+  font-family: "Source Sans Pro", "Arial", "Helvetica", sans-serif;
+  font-weight: 400;
+  background-color: #191d2c;
+  width: 320px;
+  color: #e1fd2c;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  width: 320px;
+  height: 70px;
+  padding-top: 25px;
+  position: relative;
+}
+
+.logo {
+  width: 100px;
+  height: 20px;
+  margin: 0 auto;
+}
+
+.burger {
+  font: normal normal normal 14px/1 FontAwesome;
+}/*# sourceMappingURL=style.css.map */
