@@ -1,0 +1,7 @@
+.options__plus-li {
+    list-style-type: none;
+}
+.options__plus-li:before {
+    content: "+";
+    margin-right: 4px;
+}
