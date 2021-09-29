@@ -1,8 +1,9 @@
+@import "./modules/blocks/lead/__img/lead__img.css";
 .page {
   font-family: "Source Sans Pro", "Arial", "Helvetica", sans-serif;
   font-weight: 400;
   background-color: #191d2c;
-  width: 320px;
+  min-width: 320px;
   color: #e1fd2c;
   margin: 0 auto;
 }
@@ -11,16 +12,103 @@
   display: flex;
   width: 320px;
   height: 70px;
-  padding-top: 25px;
   position: relative;
+  border-bottom: 1px solid;
+  margin: 0 auto;
 }
 
 .logo {
+  margin: 0 auto;
+}
+
+.header__logo {
   width: 100px;
   height: 20px;
-  margin: 0 auto;
+  padding-top: 25px;
 }
 
 .burger {
   font: normal normal normal 14px/1 FontAwesome;
+}
+
+.lead {
+  display: grid;
+  width: 320px;
+  margin: 0 auto;
+  padding-bottom: 62px;
+  border-bottom: 1px solid;
+}
+
+.lead__paragraph {
+  text-transform: uppercase;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 60px;
+  font-weight: 400;
+  transition: color 0.3s;
+  box-shadow: none;
+  z-index: 1;
+  color: #e1fd2c;
+  background-color: #191d2c;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(#e1fd2c, #e1fd2c);
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transition: background-size 0.5s;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px 25px;
+  top: 0;
+  right: 16px;
+  height: 100%;
+  width: 25px;
+  z-index: -1;
+}
+
+.button:hover {
+  color: #191d2c;
+  font-weight: 600;
+}
+
+.button:hover::before {
+  background-size: 100% 100%;
+}
+
+.button:hover::after {
+  transition: all 0.3s;
+  transition-delay: 0.3s;
+  filter: invert(100%);
+}
+
+.button:hover::active::before {
+  transform: scale(1.15, 1.2);
+}
+
+.lead__btn {
+  width: 280px;
+  height: 64px;
 }/*# sourceMappingURL=style.css.map */

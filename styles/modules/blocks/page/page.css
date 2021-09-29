@@ -2,7 +2,7 @@
   font-family: "Source Sans Pro", "Arial", "Helvetica", sans-serif;
   font-weight: 400;
   background-color: #191d2c;
-  width: 320px;
+  min-width: 320px;
   color: #e1fd2c;
   margin: 0 auto;
 }/*# sourceMappingURL=page.css.map */
