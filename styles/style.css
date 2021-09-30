@@ -1,22 +1,38 @@
-@import "./modules/blocks/lead/__img/lead__img.css";
 .page {
   font-family: "Source Sans Pro", "Arial", "Helvetica", sans-serif;
   font-weight: 400;
   background-color: #191d2c;
-  min-width: 320px;
   color: #e1fd2c;
   margin: 0 auto;
+  max-width: 1280px;
+  min-width: 320px;
 }
 
 .header {
   display: flex;
-  width: 320px;
   height: 70px;
   position: relative;
   border-bottom: 1px solid;
   margin: 0 auto;
+  max-width: 1184px;
+  min-width: 320px;
 }
 
+@media screen and (min-width: 1023px) and (max-width: 1279px) {
+  .header {
+    max-width: 928px;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .header {
+    max-width: 720px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header {
+    max-width: 288px;
+  }
+}
 .logo {
   margin: 0 auto;
 }
@@ -37,6 +53,13 @@
   margin: 0 auto;
   padding-bottom: 62px;
   border-bottom: 1px solid;
+}
+
+.lead__img {
+  margin-bottom: 60px;
+  margin-top: 60px;
+  width: 280px;
+  height: 202px;
 }
 
 .lead__paragraph {
@@ -134,4 +157,9 @@
 .options__minus-li:before {
   content: "-";
   margin-right: 4px;
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
 }/*# sourceMappingURL=style.css.map */

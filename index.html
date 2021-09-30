@@ -6,6 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./index.css" />
         <link rel="stylesheet" href="./styles/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+        />
+
         <title>AUTO-MAGAZINE</title>
     </head>
     <body class="page">
@@ -68,7 +73,83 @@
                     </ul>
                 </div>
             </section>
+            <section class="gallery">
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img
+                                src="./images/bus1.jpg"
+                                alt="Изображение Volkswagen T1"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="./images/bus2.jpg"
+                                alt="Изображение интерьер Volkswagen T1"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="./images/bus3.jpg"
+                                alt="Изображение интерьер Volkswagen T1"
+                            />
+                        </div>
+                        ...
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+                <h3>Галерея</h3>
+            </section>
+            <section class="link-press">
+                <h3>Пресса</h3>
+            </section>
+            <section class="subscription">
+                <h3>Подписка</h3>
+                <p>На новые спецвыпуски машин.</p>
+                <form class="popup__form" name="edit-profile">
+                    <input
+                        class="popup__name"
+                        name="mesto-title"
+                        type="text"
+                        placeholder="ИМЯ"
+                    />
+                    <input
+                        class="popup__name"
+                        name="mesto-link"
+                        type="url"
+                        placeholder="ФАМИЛИЯ"
+                    />
+                    <input
+                        class="popup__name"
+                        name="mesto-link"
+                        type="url"
+                        placeholder="ПОЧТА"
+                    />
+                    <button type="submit" class="popup__button">
+                        ПОДПИСКА
+                    </button>
+                </form>
+            </section>
         </main>
-        <footer class="footer"></footer>
+        <footer class="footer">
+            <img
+                src="./images/logo.svg"
+                alt="Логотип"
+                class="logo header__logo"
+            />
+            <p class="footer__copyright">&#169; Auto-Magazine 2021</p>
+        </footer>
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script src="./scripts/slider-script.js"></script>
     </body>
 </html>
