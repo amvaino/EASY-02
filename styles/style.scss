@@ -1,4 +1,5 @@
 @import "./modules/variables.scss";
+@import "./modules/mixins.scss";
 @import "./modules/blocks/page/page.scss";
 @import "./modules/blocks/header/header.scss";
 @import "./modules/blocks/logo/logo.scss";
@@ -12,7 +13,11 @@
 @import "./modules/blocks/options/options.scss";
 @import "./modules/blocks/options/__plus-li/options__plus-li.scss";
 @import "./modules/blocks/options/__minus-li/options__minus-li.scss";
+@import "./modules/blocks/subscription/__form/subscription__form.scss";
+@import "./modules/blocks/subscription/__button/subscription__button.scss";
+@import "./modules/blocks/gallery/_img.scss";
 .swiper {
+    max-width: 100%;
     width: 600px;
     height: 300px;
 }
