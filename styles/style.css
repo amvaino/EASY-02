@@ -179,6 +179,8 @@
   background-color: #191d2c;
   padding-left: 11px;
   box-sizing: border-box;
+  font-size: 9px;
+  line-height: 18px;
 }
 .subscription__form input[name=name] {
   grid-column: 1/2;
@@ -196,7 +198,7 @@
   border: 0;
 }
 .subscription__form input[type=email] {
-  width: 201px;
+  width: 200px;
   border: 0;
 }
 .subscription__form input[type=text]::-moz-placeholder {

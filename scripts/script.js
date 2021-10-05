@@ -1,9 +1,8 @@
-function myFunction() {
-    let change = document.querySelector(".subscription__button");
-    console.log(change);
-    if (change.innerHTML == "Подписка") {
-        change.innerHTML = "Готово!";
+const subscriptionButton = document.querySelector(".subscription__button"); //находим кнопку "Подписка"
+subscriptionButton.addEventListener("click", (event) => {
+    if (subscriptionButton.innerHTML == "готово!") {
+        subscriptionButton.innerHTML = "подписка";
     } else {
-        change.innerHTML = "Подписка";
+        subscriptionButton.innerHTML = "готово!";
     }
-}
+});

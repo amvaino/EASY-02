@@ -18,6 +18,8 @@
         background-color: $BGcolor;
         padding-left: 11px;
         box-sizing: border-box;
+        font-size: 9px;
+        line-height: 18px;
 
         &[name="name"] {
             grid-column: 1/2;
@@ -35,7 +37,7 @@
             border: 0;
         }
         &[type="email"] {
-            width: 201px;
+            width: 200px;
             border: 0;
         }
         &[type="text"]::placeholder {
