@@ -2,15 +2,12 @@
     display: grid;
     grid-template-columns: 140px 60px 80px;
     grid-template-rows: 32px 32px;
-    border: 1px solid;
     justify-content: center;
     justify-items: end;
     align-content: stretch;
     max-width: 280px;
     margin: auto;
     background-color: $contentColor;
-    padding: 1px;
-    gap: 1px;
 
     input {
         padding: 0;
@@ -20,6 +17,7 @@
         box-sizing: border-box;
         font-size: 9px;
         line-height: 18px;
+        border: 1px solid;
 
         &[name="name"] {
             grid-column: 1/2;
@@ -34,11 +32,9 @@
         }
         &[type="text"] {
             width: 140px;
-            border: 0;
         }
         &[type="email"] {
             width: 200px;
-            border: 0;
         }
         &[type="text"]::placeholder {
             color: $contentColor;

@@ -5,7 +5,11 @@
   color: #e1fd2c;
   margin: 0 auto;
   max-width: 1440px;
-  min-width: 320px;
+}
+
+.content {
+  width: 320px;
+  margin: 0 auto;
 }
 
 .header {
@@ -14,7 +18,7 @@
   position: relative;
   border-bottom: 1px solid;
   margin: 0 auto;
-  max-width: 1184px;
+  max-width: 100%;
   min-width: 320px;
 }
 
@@ -25,7 +29,7 @@
 }
 @media screen and (min-width: 767px) and (max-width: 1023px) {
   .header {
-    max-width: 720px;
+    max-width: 767px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -139,6 +143,31 @@
 .options {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  border-bottom: 1px solid;
+}
+.options p {
+  font-size: 16px;
+  margin: 0;
+  line-height: 27px;
+  margin-top: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid;
+}
+.options p span {
+  font-weight: bold;
+}
+.options h3 {
+  margin-top: 21px;
+  margin-bottom: 40px;
+}
+.options ul {
+  margin-bottom: 20px;
+  border-bottom: 1px solid;
+}
+.options ul li {
+  list-style-type: none;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .options__plus-li {
@@ -150,10 +179,6 @@
   margin-right: 4px;
 }
 
-.options__minus-li {
-  list-style-type: none;
-}
-
 .options__minus-li:before {
   content: "-";
   margin-right: 4px;
@@ -163,15 +188,12 @@
   display: grid;
   grid-template-columns: 140px 60px 80px;
   grid-template-rows: 32px 32px;
-  border: 1px solid;
   justify-content: center;
   justify-items: end;
   align-content: stretch;
   max-width: 280px;
   margin: auto;
   background-color: #e1fd2c;
-  padding: 1px;
-  gap: 1px;
 }
 .subscription__form input {
   padding: 0;
@@ -181,6 +203,7 @@
   box-sizing: border-box;
   font-size: 9px;
   line-height: 18px;
+  border: 1px solid;
 }
 .subscription__form input[name=name] {
   grid-column: 1/2;
@@ -195,11 +218,9 @@
 }
 .subscription__form input[type=text] {
   width: 140px;
-  border: 0;
 }
 .subscription__form input[type=email] {
   width: 200px;
-  border: 0;
 }
 .subscription__form input[type=text]::-moz-placeholder {
   color: #e1fd2c;
@@ -281,6 +302,11 @@
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.footer {
+  width: 320px;
+  margin: 0 auto;
 }
 
 .swiper {

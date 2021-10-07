@@ -1,7 +1,3 @@
-.options__minus-li {
-  list-style-type: none;
-}
-
 .options__minus-li:before {
   content: "-";
   margin-right: 4px;

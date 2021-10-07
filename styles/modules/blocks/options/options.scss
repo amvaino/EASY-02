@@ -1,4 +1,29 @@
 .options {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    border-bottom: 1px solid;
+    & p {
+        font-size: 16px;
+        margin: 0;
+        line-height: 27px;
+        margin-top: 18px;
+        padding-bottom: 18px;
+        border-bottom: 1px solid;
+        & span {
+            font-weight: bold;
+        }
+    }
+    & h3 {
+        margin-top: 21px;
+        margin-bottom: 40px;
+    }
+    & ul {
+        margin-bottom: 20px;
+        border-bottom: 1px solid;
+        & li {
+            list-style-type: none;
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
 }
