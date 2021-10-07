@@ -1,0 +1,32 @@
+.link-press {
+    min-height: 287px;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    & span {
+        font-weight: bold;
+    }
+    & li {
+        list-style-type: none;
+    }
+    & a {
+        text-decoration: none;
+        color: $contentColor;
+        font-size: 14px;
+        line-height: 28px;
+        border: 1px solid;
+        width: 88px;
+        height: 42px;
+        border-radius: 100px/50px;
+        text-align: center;
+        &:hover {
+            background-color: $contentColor;
+            color: $BGcolor;
+            transition: background-color 0.6s ease-in-out;
+        }
+    }
+    & h3 {
+        display: none;
+    }
+}

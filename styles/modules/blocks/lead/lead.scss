@@ -5,3 +5,18 @@
     padding-bottom: 62px;
     border-bottom: 1px solid;
 }
+@media screen and (min-width: 1023px) and (max-width: 1279px) {
+    .lead {
+        max-width: 928px;
+    }
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    .lead {
+        max-width: 767px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .lead {
+        max-width: 288px;
+    }
+}

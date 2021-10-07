@@ -26,4 +26,20 @@
   list-style-type: none;
   font-size: 16px;
   line-height: 20px;
+}
+
+@media screen and (min-width: 1023px) and (max-width: 1279px) {
+  .options {
+    max-width: 928px;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .options {
+    max-width: 767px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .options {
+    max-width: 288px;
+  }
 }/*# sourceMappingURL=options.css.map */
