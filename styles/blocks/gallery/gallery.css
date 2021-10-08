@@ -1,0 +1,27 @@
+.gallery__nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.gallery button {
+  border: 0;
+  padding: 0;
+}
+.gallery ul {
+  list-style-type: none;
+  padding: 0;
+}
+.gallery__title {
+  margin: 0;
+  padding: 0;
+  margin-right: 126px;
+}
+.gallery__img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=gallery.css.map */

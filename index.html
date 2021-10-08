@@ -4,13 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./index.css" />
-        <link rel="stylesheet" href="./styles/style.css" />
-        <link
-            rel="stylesheet"
-            href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
-        />
-
+        <link rel="stylesheet" href="./pages/index.css" />
         <title>AUTO-MAGAZINE</title>
     </head>
     <body class="page">
@@ -26,16 +20,16 @@
                     <span></span>
                 </label>
                 <ul class="menu__box">
-                    <li><a class="menu__item" href="#">Факты</a></li>
-                    <li><a class="menu__item" href="#">Галерея</a></li>
-                    <li><a class="menu__item" href="#">Пресса</a></li>
+                    <li><a class="menu__item" href="#options">Факты</a></li>
+                    <li><a class="menu__item" href="#gallery">Галерея</a></li>
+                    <li><a class="menu__item" href="#section-3">Пресса</a></li>
                 </ul>
             </div>
         </header>
         <main class="content">
             <section class="lead">
                 <p class="lead__paragraph">volkswagen T1</p>
-                <h1 class="content__title">
+                <h1 class="lead__title">
                     Новая версия популярного микроавтобуса
                 </h1>
                 <p class="lead__paragraph">С ЭЛЕКТРО ДВИГАТЕЛЕМ</p>
@@ -46,7 +40,7 @@
                 />
                 <button class="button lead__btn">подробнее</button>
             </section>
-            <section class="options">
+            <section id="options" class="options">
                 <p>
                     <span>VW T1 Electro:</span> Отделение Volkswagen Commercial
                     Vehicles представило концепт e-Bulli: классический вэн T1
@@ -72,46 +66,38 @@
                     </ul>
                 </div>
             </section>
-            <section class="gallery">
-                <!-- Slider main container -->
-                <div class="swiper">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
+            <section id="gallery" class="gallery">
+                <div class="slider2">
+                        <div class="item2">
                             <img
                                 src="./images/bus1.jpg"
                                 alt="Изображение Volkswagen T1"
                                 class="gallery__img"
                             />
                         </div>
-                        <div class="swiper-slide">
+                        <div class="item2">
                             <img
-                                src="./images/bus2.jpg"
-                                alt="Изображение интерьер Volkswagen T1"
+                                src="./images/bus1.jpg"
+                                alt="Изображение Volkswagen T1"
                                 class="gallery__img"
                             />
                         </div>
-                        <div class="swiper-slide">
+                        <div class="item2">
                             <img
                                 src="./images/bus3.jpg"
                                 alt="Изображение интерьер Volkswagen T1"
                                 class="gallery__img"
                             />
                         </div>
-                    </div>
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-
-                    <!-- If we need scrollbar -->
-                    <div class="swiper-scrollbar"></div>
                 </div>
-                <h3>Галерея</h3>
+                <div class="gallery__nav">
+                    <h3 class="gallery__title">Галерея</h3>
+                    <button class="prev arrow arrow__left" onclick="minusSlide()"></button>
+                    <button class="arrow" onclick="plusSlide()"></button>
+                </div>
+                </section>
             </section>
-            <section class="link-press">
+            <section class="link-press" id="section-3">
                 <h3>Пресса</h3>
                 <div class="slider">
                     <div class="item">
@@ -125,7 +111,6 @@
                             >Читать</a
                         >
                     </div>
-
                     <div class="item">
                         <p>
                             <span>Engadget:</span> VW’s e-BULLI concept shows
@@ -138,7 +123,6 @@
                         >
                     </div>
                 </div>
-
                 <div class="slider-dots">
                     <span
                         class="slider-dots_item"
@@ -186,8 +170,6 @@
             />
             <p class="footer__copyright">&#169; Auto-Magazine 2021</p>
         </footer>
-        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
         <script src="./scripts/script.js"></script>
-        <script src="./scripts/slider-script.js"></script>
     </body>
 </html>

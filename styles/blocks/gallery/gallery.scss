@@ -1,0 +1,28 @@
+.gallery {
+    &__nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+    button {
+        border: 0;
+        padding: 0;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    &__title {
+        margin: 0;
+        padding: 0;
+        margin-right: 126px;
+    }
+    &__img {
+        max-width: 100%;
+        object-fit: cover;
+    }
+}
