@@ -17,7 +17,7 @@
             <div class="hamburger-menu">
                 <input id="menu__toggle" type="checkbox" />
                 <label class="menu__btn" for="menu__toggle">
-                    <span></span>
+                  <span></span>
                 </label>
                 <ul class="menu__box">
                     <li><a class="menu__item" href="#options">Факты</a></li>
@@ -41,7 +41,7 @@
                 <button class="button lead__btn">подробнее</button>
             </section>
             <section id="options" class="options">
-                <p>
+                <p class="options__paragraph">
                     <span>VW T1 Electro:</span> Отделение Volkswagen Commercial
                     Vehicles представило концепт e-Bulli: классический вэн T1
                     1966 года с электрической силовой установкой. По словам
@@ -51,91 +51,95 @@
                     продавать частным клиентам.
                 </p>
                 <div class="options__plus">
-                    <h3>Плюсы</h3>
-                    <ul>
-                        <li class="options__plus-li">Экологичный</li>
-                        <li class="options__plus-li">Экономный</li>
-                        <li class="options__plus-li">Тихий</li>
+                    <h3 class="options__title">Плюсы</h3>
+                    <ul class="options__list">
+                        <li class="options__li options__plus-li">Экологичный</li>
+                        <li class="options__li options__plus-li">Экономный</li>
+                        <li class="options__li options__plus-li">Тихий</li>
                     </ul>
                 </div>
                 <div class="options__minus">
-                    <h3>Минусы</h3>
-                    <ul>
-                        <li class="options__minus-li">Дорогой</li>
-                        <li class="options__minus-li">Подзарядка</li>
+                    <h3 class="options__title">Минусы</h3>
+                    <ul class="options__list">
+                        <li class="options__li options__minus-li">Дорогой</li>
+                        <li class="options__li options__minus-li">Подзарядка</li>
                     </ul>
                 </div>
             </section>
             <section id="gallery" class="gallery">
-                <div class="slider2">
-                        <div class="item2">
+                <ul class="gallery__slider">
+                        <li class="gallery__item">
                             <img
                                 src="./images/bus1.jpg"
                                 alt="Изображение Volkswagen T1"
                                 class="gallery__img"
                             />
-                        </div>
-                        <div class="item2">
+                        </li>
+                        <li class="gallery__item">
                             <img
-                                src="./images/bus1.jpg"
+                                src="./images/bus2.jpg"
                                 alt="Изображение Volkswagen T1"
                                 class="gallery__img"
                             />
-                        </div>
-                        <div class="item2">
+                        </li>
+                        <li class="gallery__item">
                             <img
                                 src="./images/bus3.jpg"
                                 alt="Изображение интерьер Volkswagen T1"
                                 class="gallery__img"
                             />
-                        </div>
-                </div>
+                        </li>
+                </ul>
                 <div class="gallery__nav">
-                    <h3 class="gallery__title">Галерея</h3>
-                    <button class="prev arrow arrow__left" onclick="minusSlide()"></button>
-                    <button class="arrow" onclick="plusSlide()"></button>
+                    <h3 class="gallery__title title-section">Галерея</h3>
+                    <div class="gallery__nav-arrow">
+                        <button class="gallery__arrow prev arrow arrow__left" onclick="minusSlide()"></button>
+                        <button class="gallery__arrow arrow" onclick="plusSlide()"></button>
+                    </div>
                 </div>
                 </section>
             </section>
             <section class="link-press" id="section-3">
-                <h3>Пресса</h3>
-                <div class="slider">
-                    <div class="item">
-                        <p>
-                            <span>Drive.ru:</span> Вэн Volkswagen e-Bulli
-                            скрестил классику с современной техникой.
-                        </p>
-                        <a
-                            href="https://www.drive.ru/news/volkswagen/5e7447bdec05c4b251000010.html"
-                            target="_blank"
-                            >Читать</a
-                        >
+                <h3 class="title-section link-press__title">Пресса</h3>
+                <div class="link-press__content">
+                    <ul class="link-press__slider">
+                        <li class="link-press__item">
+                            <p>
+                                <span>Drive.ru:</span> Вэн Volkswagen e-Bulli
+                                скрестил классику с современной техникой.
+                            </p>
+                            <a
+                                href="https://www.drive.ru/news/volkswagen/5e7447bdec05c4b251000010.html"
+                                target="_blank"
+                                >Читать</a
+                            >
+                        </li>
+                        <li class="link-press__item">
+                            <p>
+                                <span>Engadget:</span> VW’s e-BULLI concept shows
+                                how your classic van can become an EV.
+                            </p>
+                            <a
+                                href="https://www.engadget.com/2020-03-20-vw-unveils-e-bulli-t1-electric-conversion.html"
+                                target="_blank"
+                                >Читать</a
+                            >
+                        </li>
+                    </ul>
+                    <div class="link-press__slider-dots">
+                        <span
+                            class="link-press__slider-dots-item"
+                            onclick="currentSlide(1)"
+                        ></span>
+                        <span
+                            class="link-press__slider-dots-item"
+                            onclick="currentSlide(2)"
+                        ></span>
                     </div>
-                    <div class="item">
-                        <p>
-                            <span>Engadget:</span> VW’s e-BULLI concept shows
-                            how your classic van can become an EV.
-                        </p>
-                        <a
-                            href="https://www.engadget.com/2020-03-20-vw-unveils-e-bulli-t1-electric-conversion.html"
-                            target="_blank"
-                            >Читать</a
-                        >
-                    </div>
-                </div>
-                <div class="slider-dots">
-                    <span
-                        class="slider-dots_item"
-                        onclick="currentSlide(1)"
-                    ></span>
-                    <span
-                        class="slider-dots_item"
-                        onclick="currentSlide(2)"
-                    ></span>
                 </div>
             </section>
             <section class="subscription">
-                <h3>Подписка</h3>
+                <h3 class="title-section subscription__title">Подписка</h3>
                 <p>На новые спецвыпуски машин.</p>
                 <form class="subscription__form" name="edit-profile">
                     <input

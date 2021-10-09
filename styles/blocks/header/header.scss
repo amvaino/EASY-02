@@ -1,15 +1,25 @@
 .header {
-    display: flex;
+    display: grid;
     height: 70px;
     position: relative;
     border-bottom: 1px solid;
     margin: 0 auto;
     max-width: 100%;
     min-width: $mobileWidth;
+    &__logo {
+        width: 100px;
+        height: 20px;
+        padding-top: 25px;
+    }
 }
-@media screen and (min-width: 1023px) and (max-width: 1279px) {
+@media screen and (min-width: 1440px) {
     .header {
-        max-width: 928px;
+        max-width: 1440px;
+        &__logo {
+            width: 184px;
+            height: 38px;
+            padding-top: 16px;
+        }
     }
 }
 @media screen and (min-width: 767px) and (max-width: 1023px) {

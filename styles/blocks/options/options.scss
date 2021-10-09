@@ -2,16 +2,25 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     border-bottom: 1px solid;
-    & p {
+    &__paragraph {
         font-size: 16px;
         margin: 0;
         line-height: 27px;
         margin-top: 18px;
-        padding-bottom: 18px;
-        border-bottom: 1px solid;
+        padding: 0 20px 18px 20px;
         & span {
             font-weight: bold;
         }
+    }
+    &__title {
+        font-size: 22px;
+        line-height: 22px;
+        letter-spacing: 2px;
+        margin-top: 21px;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        font-weight: 300;
+        margin-left: 20px;
     }
     &__minus-li:before {
         content: "-";
@@ -21,32 +30,31 @@
         content: "+";
         margin-right: 4px;
     }
-    & h3 {
-        margin-top: 21px;
-        margin-bottom: 40px;
-    }
-    & ul {
+    &__list {
         margin-bottom: 20px;
-        border-bottom: 1px solid;
-        & li {
-            list-style-type: none;
-            font-size: 16px;
-            line-height: 20px;
+        padding: 0;
+        margin-left: 20px;
+    }
+    &__li {
+        list-style-type: none;
+        font-size: 16px;
+        line-height: 20px;
+        padding-bottom: 6px;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .options {
+        max-width: 1440px;
+        grid-template-columns: 50% auto;
+        &__paragraph {
+            grid-column: 1/2;
+            grid-row: 1/4;
+            max-width: 620px;
+            font-size: 30px;
+            line-height: 42px;
+            font-weight: 300;
+            margin: 40px 50px 45px 50px;
+            border: none;
         }
-    }
-}
-@media screen and (min-width: 1023px) and (max-width: 1279px) {
-    .options {
-        max-width: 928px;
-    }
-}
-@media screen and (min-width: 767px) and (max-width: 1023px) {
-    .options {
-        max-width: 767px;
-    }
-}
-@media screen and (max-width: 767px) {
-    .options {
-        max-width: 288px;
     }
 }

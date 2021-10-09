@@ -1,4 +1,5 @@
 .gallery {
+    padding: 20px;
     &__nav {
         display: flex;
         flex-direction: row;
@@ -8,21 +9,37 @@
         align-items: center;
         padding-bottom: 20px;
     }
-    button {
+    &__arrow {
+        margin-right: 30px;
         border: 0;
         padding: 0;
     }
-    ul {
+    &__nav-arrow {
+        display: flex;
+    }
+    &__slider {
         list-style-type: none;
         padding: 0;
     }
-    &__title {
-        margin: 0;
-        padding: 0;
-        margin-right: 126px;
-    }
+
     &__img {
         max-width: 100%;
         object-fit: cover;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .gallery {
+        max-width: 50%;
+        border-right: 1px solid;
+        padding: 0;
+        &__nav {
+            justify-content: space-between;
+        }
+        &__nav-arrow {
+            margin-right: 50px;
+        }
+        &__slider {
+            margin-top: 0;
+        }
     }
 }
