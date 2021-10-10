@@ -40,35 +40,7 @@
     right: 0;
     border-radius: 3px 0 0 3px;
 }
-/* При наведении на кнопки добавляем фон кнопок */
-.slider .prev:hover,
-.slider .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
 
-/* Кружочки */
-.slider-dots {
-    position: absolute;
-    z-index: 5;
-    top: 254px;
-    left: 20px;
-}
-.slider-dots_item {
-    cursor: pointer;
-    height: 12px;
-    width: 12px;
-    margin: 0 2px;
-    background-color: $BGcolor;
-    border: 1px solid;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease-in-out;
-    z-index: 2;
-}
-.active,
-.slider-dots_item:hover {
-    background-color: $contentColor;
-}
 /* Анимация слайдов */
 .slider .item {
     -webkit-animation-name: fade;
@@ -107,4 +79,24 @@
     to {
         opacity: 1;
     }
+}
+
+.tabs > input[type="radio"] {
+    display: none;
+}
+
+.tabs > div {
+    display: none;
+}
+
+#tab-btn-1:checked ~ #content-1,
+#tab-btn-2:checked ~ #content-2 {
+    display: block;
+}
+
+.tabs > label {
+    transition: color 0.15s ease-in-out;
+}
+.tabs > input[type="radio"]:checked + label {
+    background-color: $contentColor;
 }

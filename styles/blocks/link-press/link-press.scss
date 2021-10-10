@@ -9,6 +9,7 @@
     grid-template-columns: 50% auto;
     &__content {
         display: block;
+        position: relative;
     }
     &__item {
         animation-name: fade;
@@ -18,14 +19,45 @@
         justify-content: space-between;
         align-items: flex-end;
         height: 320px;
-    }
-    & span {
-        font-weight: bold;
+        span {
+            font-weight: bold;
+        }
     }
     & li {
         list-style-type: none;
     }
-    & a {
+    /* Кружочки */
+    &__slider-dots {
+        position: absolute;
+        z-index: 5;
+        top: 438px;
+        left: 771px;
+    }
+    &__slider-dots-item {
+        cursor: pointer;
+        position: absolute;
+        top: 437px;
+        left: 50px;
+        height: 12px;
+        width: 12px;
+        margin: 0 2px;
+        background-color: $BGcolor;
+        border: 1px solid;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease-in-out;
+        z-index: 2;
+        &[for="tab-btn-2"] {
+            margin-left: 26px;
+        }
+        &:hover {
+            background-color: $contentColor;
+        }
+        &:active {
+            background-color: $contentColor;
+        }
+    }
+    &__btn {
         text-decoration: none;
         color: $contentColor;
         font-size: 14px;
@@ -35,6 +67,7 @@
         height: 42px;
         border-radius: 100px/50px;
         text-align: center;
+        display: block;
         &:hover {
             background-color: $contentColor;
             color: $BGcolor;
@@ -45,16 +78,38 @@
         display: none;
     }
 }
-@media screen and (min-width: 1440px) {
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
     .link-press {
         padding-top: 0;
         padding-bottom: 0;
+        display: flex;
+        min-height: 500px;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .link-press {
         &__title {
             display: block;
             padding-top: 50px;
         }
         &__content {
             border-left: 1px solid;
+            min-height: 500px;
+        }
+        &__btn {
+            font-size: 19px;
+            line-height: 48px;
+            min-width: 110px;
+            min-height: 52px;
+            margin-top: 260px;
+            margin-left: 510px;
+        }
+        &__item {
+            margin: 50px;
+            font-size: 30px;
+            line-height: 42px;
+            font-weight: 300;
         }
     }
 }

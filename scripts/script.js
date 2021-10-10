@@ -6,7 +6,6 @@ subscriptionButton.addEventListener("click", (event) => {
         subscriptionButton.innerHTML = "готово!";
     }
 });
-
 /* Индекс слайда по умолчанию */
 let slideIndex = 1;
 showSlides(slideIndex);
