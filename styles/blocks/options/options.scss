@@ -45,7 +45,7 @@
 @media screen and (min-width: 1440px) {
     .options {
         max-width: 1440px;
-        grid-template-columns: 50% auto;
+        grid-template-columns: 50% 25% 25%;
         &__paragraph {
             grid-column: 1/2;
             grid-row: 1/4;
@@ -55,6 +55,33 @@
             font-weight: 300;
             margin: 40px 50px 45px 50px;
             border: none;
+        }
+        &__list {
+            margin-top: 0;
+            margin-left: 50px;
+        }
+        &__li {
+            font-weight: 300;
+            font-size: 22px;
+            line-height: 32px;
+            padding: 0;
+        }
+        &__title {
+            font-size: 30px;
+            line-height: 37px;
+            margin-top: 40px;
+            margin-left: 50px;
+            margin-bottom: 50px;
+        }
+        &__plus {
+            grid-column: 2/3;
+            grid-row: 1/4;
+            border-left: 1px solid;
+        }
+        &__minus {
+            grid-column: 3/4;
+            grid-row: 1/4;
+            border-left: 1px solid;
         }
     }
 }

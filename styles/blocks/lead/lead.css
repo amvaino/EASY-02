@@ -36,6 +36,7 @@
     max-width: 1440px;
     grid-template-columns: 50% auto;
     padding-top: 150px;
+    padding-bottom: 150px;
   }
   .lead__title {
     font-size: 65px;

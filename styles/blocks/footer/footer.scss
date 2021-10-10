@@ -1,4 +1,27 @@
 .footer {
-    width: 320px;
+    max-width: 320px;
     margin: 0 auto;
+    display: grid;
+}
+@media screen and (min-width: 1440px) {
+    .footer {
+        grid-template-columns: 720px auto;
+        max-width: 1440px;
+        justify-content: space-between;
+        &__logo {
+            margin-top: 50px;
+            margin-right: 50px;
+            max-width: 184px;
+        }
+        &__copyright {
+            text-align: end;
+            font-size: 13px;
+            line-height: 13px;
+            padding-right: 50px;
+            padding-top: 165px;
+            padding-bottom: 50px;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+    }
 }
