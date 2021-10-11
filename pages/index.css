@@ -372,9 +372,10 @@ template {
 .content {
   min-width: 320px;
   margin: 0 auto;
+  max-width: 320px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1439px) {
+@media screen and (min-width: 768px) {
   .content {
     max-width: 768px;
   }
@@ -384,13 +385,17 @@ template {
     max-width: 1440px;
   }
 }
+.logo {
+  margin: 0 auto;
+}
+
 .header {
   display: grid;
   height: 70px;
   position: relative;
   border-bottom: 1px solid;
   margin: 0 auto;
-  max-width: 100%;
+  max-width: 320px;
   min-width: 320px;
 }
 .header__logo {
@@ -399,17 +404,7 @@ template {
   padding-top: 25px;
 }
 
-@media screen and (min-width: 1440px) {
-  .header {
-    max-width: 1440px;
-  }
-  .header__logo {
-    width: 184px;
-    height: 38px;
-    padding-top: 16px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1439px) {
+@media screen and (min-width: 768px) {
   .header {
     max-width: 768px;
   }
@@ -419,20 +414,75 @@ template {
     padding-top: 16px;
   }
 }
-/* контейнер меню */
+@media screen and (min-width: 1440px) {
+  .header {
+    max-width: 1440px;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .header__logo {
+    margin-right: 628px;
+  }
+}
+.menu {
+  padding: 0;
+}
+.menu__toggle {
+  display: none;
+}
 .menu__box {
+  z-index: 1;
+  min-height: 70px;
+  transition-duration: 0.5s;
+  justify-content: flex-start;
+  padding-left: 20px;
   display: flex;
   position: fixed;
   visibility: hidden;
   top: 0;
   left: -100%;
-  width: 300px;
+  width: 100%;
   margin: 0;
-  padding: 0;
   list-style: none;
   text-align: center;
   color: #e1fd2c;
   background-color: #191d2c;
+}
+.menu__item {
+  display: block;
+  margin: 27px 16px 0 auto;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: #e1fd2c;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition-duration: 0.25s;
+}
+.menu__item:hover {
+  opacity: 0.8;
+}
+.menu__btn {
+  display: flex;
+  /* используем flex для центрирования содержимого */
+  align-items: center;
+  /* центрируем содержимое кнопки */
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 5;
+}
+.menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+.menu__btn > span::before {
+  content: "";
+  top: -8px;
 }
 
 /* элементы меню */
@@ -455,49 +505,47 @@ template {
   left: 0;
 }
 
-.menu {
-  padding: 0;
+@media screen and (min-width: 768px) {
+  .menu__box {
+    width: 100%;
+    margin-left: 34px;
+    position: absolute;
+  }
+  .menu__item {
+    font-size: 12px;
+    margin-right: 20px;
+  }
+  .menu__btn {
+    width: 26px;
+    height: 26px;
+    top: 20px;
+    right: 34px;
+  }
+  .menu__btn > span::after {
+    top: 10px;
+  }
+  .menu__btn > span::before {
+    top: -10px;
+  }
 }
-.menu__box {
-  position: absolute;
-  z-index: 1;
-  background-color: #191d2c;
-  visibility: hidden;
-  top: 0;
-  left: -100%;
-  min-width: 320px;
-  min-height: 70px;
-  list-style: none;
-  transition-duration: 0.5s;
-  display: flex;
-  justify-content: flex-start;
-  margin: 0;
-}
-.menu__item {
-  display: block;
-  margin: 27px 16px 0 auto;
-  font-size: 11px;
-  line-height: 16px;
-  letter-spacing: 1px;
-  font-weight: 400;
-  color: #e1fd2c;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition-duration: 0.25s;
-}
-.menu__item:hover {
-  opacity: 0.8;
-}
-
 @media screen and (min-width: 1440px) {
   .menu__box {
     visibility: visible;
-    left: 0;
     margin-left: 50px;
+    position: static;
+    grid-column: 1;
+    grid-row: 1;
+    padding: 0;
+  }
+  .menu__toggle {
+    display: none;
   }
   .menu__item {
     margin-right: 20px;
     font-size: 12px;
+  }
+  .menu__btn {
+    display: none;
   }
 }
 /* скрываем чекбокс */
@@ -505,26 +553,6 @@ template {
   opacity: 0;
 }
 
-/* стилизуем кнопку */
-.menu__btn {
-  display: flex;
-  /* используем flex для центрирования содержимого */
-  align-items: center;
-  /* центрируем содержимое кнопки */
-  position: absolute;
-  top: 25px;
-  right: 20px;
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  z-index: 5;
-}
-
-@media screen and (min-width: 1440px) {
-  .menu__btn {
-    display: none;
-  }
-}
 /* добавляем "гамбургер" */
 .menu__btn > span,
 .menu__btn > span::before,
@@ -534,27 +562,6 @@ template {
   width: 100%;
   height: 2px;
   background-color: #e1fd2c;
-}
-
-.menu__btn > span::before {
-  content: "";
-  top: -8px;
-}
-
-.menu__btn > span::after {
-  content: "";
-  top: 8px;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1439px) {
-  .menu__btn {
-    right: 34px;
-    width: 26px;
-    height: 26px;
-  }
-}
-.logo {
-  margin: 0 auto;
 }
 
 .title-section {
@@ -572,10 +579,9 @@ template {
 }
 .lead {
   display: grid;
-  min-width: 280px;
-  margin: 0 auto;
+  margin: 0;
   padding-top: 60px;
-  padding-bottom: 62px;
+  padding-bottom: 60px;
   border-bottom: 1px solid;
 }
 .lead__paragraph {
@@ -587,12 +593,12 @@ template {
 }
 .lead__img {
   margin: 60px auto;
-  max-width: 280px;
+  min-width: 280px;
   max-height: 202px;
 }
 .lead__btn {
-  max-width: 280px;
-  height: 64px;
+  min-width: 280px;
+  min-height: 64px;
   margin: 0 auto;
 }
 .lead__title {
@@ -603,7 +609,7 @@ template {
   font-weight: 400;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1439px) {
+@media screen and (min-width: 768px) {
   .lead {
     min-width: 700px;
     margin: 0 auto;
@@ -646,16 +652,6 @@ template {
   .lead__paragraph {
     margin: 0;
     margin-top: 30px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1439px) {
-  .lead {
-    min-width: 700px;
-    margin: 0 auto;
-  }
-  .lead__paragraph {
-    font-size: 19px;
-    line-height: 28px;
   }
 }
 .button {
@@ -734,7 +730,9 @@ template {
   margin: 0 auto;
   line-height: 27px;
   margin-top: 18px;
+  border-bottom: 1px solid;
   padding: 0 20px 18px 20px;
+  font-weight: 300;
 }
 .options__paragraph span {
   font-weight: bold;
@@ -749,13 +747,14 @@ template {
   font-weight: 300;
   margin-left: 20px;
 }
+.options__plus {
+  border-bottom: 1px solid;
+}
 .options__minus-li:before {
   content: "-";
-  margin-right: 4px;
 }
 .options__plus-li::before {
   content: "+";
-  margin-right: 4px;
 }
 .options__list {
   margin-bottom: 20px;
@@ -767,6 +766,9 @@ template {
   font-size: 16px;
   line-height: 20px;
   padding-bottom: 6px;
+}
+.options__li:last-child {
+  padding-bottom: 0;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1439px) {
@@ -840,17 +842,20 @@ template {
 .gallery {
   padding: 20px;
 }
+.gallery__title {
+  font-size: 26px;
+  line-height: 26px;
+}
 .gallery__nav {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-content: center;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding-bottom: 20px;
 }
 .gallery__arrow {
-  margin-right: 30px;
+  margin-right: 18px;
   border: 0;
   padding: 0;
   cursor: pointer;
@@ -904,9 +909,12 @@ template {
 .gallery__slider {
   list-style-type: none;
   padding: 0;
+  margin: 0;
+  margin-bottom: 50px;
 }
 .gallery__img {
-  max-width: 100%;
+  min-width: 280px;
+  max-height: 204px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1080,14 +1088,11 @@ template {
 }
 
 .link-press {
-  min-height: 286px;
   border-bottom: 1px solid;
   border-top: 1px solid;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 46px;
   position: relative;
-  display: grid;
-  grid-template-columns: 50% auto;
   /* Кружочки */
 }
 .link-press__content {
@@ -1108,6 +1113,14 @@ template {
 .link-press__item span {
   font-weight: bold;
 }
+.link-press__item p {
+  margin: 0 auto;
+  width: 280px;
+  max-height: 200px;
+  font-size: 16px;
+  line-height: 27px;
+  overflow: hidden;
+}
 .link-press li {
   list-style-type: none;
 }
@@ -1120,8 +1133,8 @@ template {
 .link-press__slider-dots-item {
   cursor: pointer;
   position: absolute;
-  top: 437px;
-  left: 50px;
+  top: 233px;
+  left: 20px;
   height: 12px;
   width: 12px;
   margin: 0 2px;
@@ -1142,16 +1155,19 @@ template {
   background-color: #e1fd2c;
 }
 .link-press__btn {
+  position: absolute;
   text-decoration: none;
   color: #e1fd2c;
   font-size: 14px;
-  line-height: 28px;
+  line-height: 42px;
   border: 1px solid;
   width: 88px;
   height: 42px;
   border-radius: 100px/50px;
   text-align: center;
   display: block;
+  top: 204px;
+  left: 213px;
 }
 .link-press__btn:hover {
   background-color: #e1fd2c;
@@ -1171,6 +1187,10 @@ template {
   }
 }
 @media screen and (min-width: 1440px) {
+  .link-press {
+    display: grid;
+    grid-template-columns: 50% auto;
+  }
   .link-press__title {
     display: block;
     padding-top: 50px;
@@ -1200,10 +1220,19 @@ template {
 }
 .subscription__text {
   margin: 0;
+  font-size: 14px;
+  line-height: 14px;
+  margin: 0 auto 60px 20px;
+}
+.subscription__title {
+  font-size: 26px;
+  line-height: 26px;
+  margin: 21px auto 14px 20px;
 }
 .subscription__button {
   font-size: 10px;
   line-height: 13px;
+  letter-spacing: 1px;
   min-width: 80px;
   color: #191d2c;
   background-color: #e1fd2c;
@@ -1233,6 +1262,7 @@ template {
   box-sizing: border-box;
   font-size: 9px;
   line-height: 18px;
+  letter-spacing: 1px;
   border: 1px solid;
 }
 .subscription__form input[name=name] {
@@ -1346,6 +1376,17 @@ template {
   max-width: 320px;
   margin: 0 auto;
   display: grid;
+}
+.footer__logo {
+  margin-top: 120px;
+}
+.footer__copyright {
+  letter-spacing: 1px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 32px;
+  font-size: 13px;
+  line-height: 13px;
 }
 
 @media screen and (min-width: 1440px) {

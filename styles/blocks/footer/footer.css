@@ -3,6 +3,17 @@
   margin: 0 auto;
   display: grid;
 }
+.footer__logo {
+  margin-top: 120px;
+}
+.footer__copyright {
+  letter-spacing: 1px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 32px;
+  font-size: 13px;
+  line-height: 13px;
+}
 
 @media screen and (min-width: 1440px) {
   .footer {

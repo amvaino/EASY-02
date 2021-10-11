@@ -4,7 +4,7 @@
     position: relative;
     border-bottom: 1px solid;
     margin: 0 auto;
-    max-width: 100%;
+    max-width: 320px;
     min-width: $mobileWidth;
     &__logo {
         width: 100px;
@@ -12,9 +12,10 @@
         padding-top: 25px;
     }
 }
-@media screen and (min-width: 1440px) {
+
+@media screen and (min-width: 768px) {
     .header {
-        max-width: 1440px;
+        max-width: 768px;
         &__logo {
             width: 184px;
             height: 38px;
@@ -22,13 +23,14 @@
         }
     }
 }
-@media screen and (min-width: 768px) and (max-width: 1439px) {
+
+@media screen and (min-width: 1440px) {
     .header {
-        max-width: 768px;
+        max-width: 1440px;
+        display: flex;
+        flex-direction: row-reverse;
         &__logo {
-            width: 184px;
-            height: 38px;
-            padding-top: 16px;
+            margin-right: 720px - 92px;
         }
     }
 }

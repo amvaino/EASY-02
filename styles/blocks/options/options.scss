@@ -7,7 +7,9 @@
         margin: 0 auto;
         line-height: 27px;
         margin-top: 18px;
+        border-bottom: 1px solid;
         padding: 0 20px 18px 20px;
+        font-weight: 300;
         & span {
             font-weight: bold;
         }
@@ -22,13 +24,14 @@
         font-weight: 300;
         margin-left: 20px;
     }
+    &__plus {
+        border-bottom: 1px solid;
+    }
     &__minus-li:before {
         content: "-";
-        margin-right: 4px;
     }
     &__plus-li::before {
         content: "+";
-        margin-right: 4px;
     }
     &__list {
         margin-bottom: 20px;
@@ -40,6 +43,9 @@
         font-size: 16px;
         line-height: 20px;
         padding-bottom: 6px;
+        &:last-child {
+            padding-bottom: 0;
+        }
     }
 }
 @media screen and (min-width: 768px) and (max-width: 1439px) {
