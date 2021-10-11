@@ -437,7 +437,7 @@ template {
   justify-content: flex-start;
   padding-left: 20px;
   display: flex;
-  position: fixed;
+  position: absolute;
   visibility: hidden;
   top: 0;
   left: -100%;
