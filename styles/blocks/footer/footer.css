@@ -15,6 +15,25 @@
   line-height: 13px;
 }
 
+@media screen and (min-width: 768px) {
+  .footer {
+    min-width: 768px;
+    grid-template-columns: 390px auto;
+  }
+  .footer__logo {
+    margin-top: 50px;
+    margin-left: 145px;
+    max-width: 184px;
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .footer__copyright {
+    margin-left: 188px;
+    margin-top: 253px;
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
 @media screen and (min-width: 1440px) {
   .footer {
     grid-template-columns: 720px auto;

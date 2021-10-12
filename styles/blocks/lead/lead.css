@@ -32,8 +32,10 @@
 
 @media screen and (min-width: 768px) {
   .lead {
-    min-width: 700px;
+    max-width: 768px;
     margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
   .lead__paragraph {
     font-size: 19px;
@@ -42,10 +44,14 @@
   .lead__title {
     font-size: 65px;
     line-height: 73px;
+    margin-top: 30px;
+    margin-bottom: 51px;
   }
   .lead__img {
-    max-width: 700px;
-    max-height: 510px;
+    min-width: 700px;
+    min-height: 510px;
+    margin-top: 100px;
+    margin-bottom: 100px;
   }
   .lead__btn {
     min-width: 360px;

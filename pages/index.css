@@ -518,7 +518,7 @@ template {
   .menu__btn {
     width: 26px;
     height: 26px;
-    top: 20px;
+    top: 22px;
     right: 34px;
   }
   .menu__btn > span::after {
@@ -611,8 +611,10 @@ template {
 
 @media screen and (min-width: 768px) {
   .lead {
-    min-width: 700px;
+    max-width: 768px;
     margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
   .lead__paragraph {
     font-size: 19px;
@@ -621,10 +623,14 @@ template {
   .lead__title {
     font-size: 65px;
     line-height: 73px;
+    margin-top: 30px;
+    margin-bottom: 51px;
   }
   .lead__img {
-    max-width: 700px;
-    max-height: 510px;
+    min-width: 700px;
+    min-height: 510px;
+    margin-top: 100px;
+    margin-bottom: 100px;
   }
   .lead__btn {
     min-width: 360px;
@@ -771,8 +777,9 @@ template {
   padding-bottom: 0;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1439px) {
+@media screen and (min-width: 768px) {
   .options {
+    padding-top: 40px;
     grid-template-columns: 50% auto;
   }
   .options__paragraph {
@@ -780,24 +787,33 @@ template {
     grid-row: 1/4;
     max-width: 100%;
     border-bottom: 1px solid;
-    padding-top: 41px;
+    padding-top: 0;
+    margin: 0;
     padding-left: 50px;
     padding-bottom: 45px;
     padding-right: 50px;
     font-size: 30px;
     line-height: 42px;
-    font-weight: 300;
+  }
+  .options__list {
+    margin-left: 50px;
   }
   .options__plus {
     border-right: 1px solid;
+    border-bottom: 0;
+    min-height: 505px;
   }
   .options__title {
     font-size: 30px;
     line-height: 37px;
+    margin-top: 41px;
+    margin-left: 50px;
+    margin-bottom: 50px;
   }
   .options__li {
     font-size: 21px;
-    line-height: 32px;
+    line-height: 30px;
+    padding-bottom: 2px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -919,7 +935,16 @@ template {
      object-fit: cover;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1439px) {
+@media screen and (min-width: 768px) {
+  .gallery {
+    padding-top: 35px;
+    padding-bottom: 50px;
+  }
+  .gallery__img {
+    min-width: 700px;
+    max-height: 510px;
+    margin: 0 auto;
+  }
   .gallery__nav {
     justify-content: space-between;
   }
@@ -927,12 +952,35 @@ template {
     font-size: 46px;
     line-height: 46px;
     font-weight: 300;
-    padding-left: 50px;
-    padding-top: 34px;
+    padding-left: 30px;
+    padding-top: 0;
   }
   .gallery__nav-arrow {
-    padding-right: 50px;
-    padding-top: 34px;
+    padding-right: 30px;
+    padding-top: 0;
+  }
+  .gallery__arrow {
+    margin-right: 35px;
+    width: 40px;
+  }
+  .gallery__arrow:last-child {
+    margin-right: 0;
+  }
+  .gallery__arrow::before {
+    width: 25px;
+    right: -3px;
+    top: 9px;
+  }
+  .gallery__arrow-left::before {
+    top: 9px;
+  }
+  .gallery__arrow-left::after {
+    top: -9px;
+  }
+  .gallery__arrow::after {
+    width: 25px;
+    right: -3px;
+    top: -9px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1093,6 +1141,7 @@ template {
   padding-top: 20px;
   padding-bottom: 46px;
   position: relative;
+  min-height: 220px;
   /* Кружочки */
 }
 .link-press__content {
@@ -1104,11 +1153,9 @@ template {
           animation-name: fade;
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
-  max-height: 220px;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
-  height: 320px;
 }
 .link-press__item span {
   font-weight: bold;
@@ -1178,12 +1225,34 @@ template {
   display: none;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1439px) {
+@media screen and (min-width: 768px) {
   .link-press {
     padding-top: 0;
     padding-bottom: 0;
-    display: flex;
-    min-height: 500px;
+    display: block;
+    min-height: 499px;
+  }
+  .link-press__item p {
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 42px;
+    min-width: 668px;
+    padding-top: 50px;
+  }
+  .link-press__item p span {
+    font-weight: 400;
+  }
+  .link-press__slider-dots-item {
+    top: 437px;
+    left: 50px;
+  }
+  .link-press__btn {
+    top: 398px;
+    left: 608px;
+    font-size: 19px;
+    line-height: 50px;
+    width: 110px;
+    height: 52px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1250,7 +1319,7 @@ template {
   justify-content: center;
   justify-items: end;
   align-content: stretch;
-  width: 280px;
+  max-width: 280px;
   margin: auto;
   background-color: #e1fd2c;
 }
@@ -1344,9 +1413,36 @@ template {
   transition: opacity 0.3s ease;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
   .subscription {
     min-width: 100%;
+  }
+  .subscription__title {
+    font-size: 46px;
+    line-height: 46px;
+    padding: 0;
+    margin: 50px auto 16px 50px;
+  }
+  .subscription__text {
+    font-size: 19px;
+    line-height: 28px;
+    margin: 0 auto 64px 50px;
+  }
+  .subscription__form {
+    grid-template-columns: 170px 90px 80px;
+    margin-left: 80px;
+    margin-top: 64px;
+    margin-bottom: 50px;
+  }
+  .subscription__form input[type=text] {
+    width: 170px;
+  }
+  .subscription__form input[type=email] {
+    width: 260px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .subscription {
     border-right: 1px solid;
   }
   .subscription__title {
@@ -1357,19 +1453,6 @@ template {
     padding-top: 16px;
     font-size: 19px;
     line-height: 28px;
-  }
-  .subscription__form {
-    grid-template-columns: 170px 90px 80px;
-    margin-left: 50px;
-    margin-top: 64px;
-    margin-bottom: 50px;
-    width: 340px;
-  }
-  .subscription__form input[type=text] {
-    width: 170px;
-  }
-  .subscription__form input[type=email] {
-    width: 260px;
   }
 }
 .footer {
@@ -1389,6 +1472,25 @@ template {
   line-height: 13px;
 }
 
+@media screen and (min-width: 768px) {
+  .footer {
+    min-width: 768px;
+    grid-template-columns: 390px auto;
+  }
+  .footer__logo {
+    margin-top: 50px;
+    margin-left: 145px;
+    max-width: 184px;
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .footer__copyright {
+    margin-left: 188px;
+    margin-top: 253px;
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
 @media screen and (min-width: 1440px) {
   .footer {
     grid-template-columns: 720px auto;

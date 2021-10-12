@@ -33,7 +33,7 @@
         justify-content: center;
         justify-items: end;
         align-content: stretch;
-        width: 280px;
+        max-width: 280px;
         margin: auto;
         background-color: $contentColor;
         input {
@@ -107,9 +107,39 @@
         }
     }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
     .subscription {
         min-width: 100%;
+        &__title {
+            font-size: 46px;
+            line-height: 46px;
+            padding: 0;
+            margin: 50px auto 16px 50px;
+        }
+        &__text {
+            font-size: 19px;
+            line-height: 28px;
+            margin: 0 auto 64px 50px;
+        }
+        &__form {
+            grid-template-columns: 170px 90px 80px;
+            margin-left: 80px;
+            margin-top: 64px;
+            margin-bottom: 50px;
+            input {
+                &[type="text"] {
+                    width: 170px;
+                }
+                &[type="email"] {
+                    width: 260px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .subscription {
         border-right: 1px solid;
         &__title {
             padding-top: 50px;
@@ -119,21 +149,6 @@
             padding-top: 16px;
             font-size: 19px;
             line-height: 28px;
-        }
-        &__form {
-            grid-template-columns: 170px 90px 80px;
-            margin-left: 50px;
-            margin-top: 64px;
-            margin-bottom: 50px;
-            width: 340px;
-            input {
-                &[type="text"] {
-                    width: 170px;
-                }
-                &[type="email"] {
-                    width: 260px;
-                }
-            }
         }
     }
 }
