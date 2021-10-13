@@ -1,7 +1,7 @@
-@import "../vendor/normalize.scss";
-@import "../vendor/fonts/fonts.scss";
-@import "../abstracts/variables.scss";
-@import "../abstracts/mixins.scss";
+@import "./vendor/normalize.scss";
+@import "./vendor/fonts/fonts.scss";
+@import "./abstracts/variables.scss";
+@import "./abstracts/mixins.scss";
 @import "../styles/blocks/page/page.scss";
 @import "../styles/blocks/content/content.scss";
 @import "../styles/blocks/logo/logo.scss";
@@ -12,6 +12,7 @@
 @import "../styles/blocks/lead/lead.scss";
 @import "../styles/blocks/button/button.scss";
 @import "../styles/blocks/options/options.scss";
+@import "../styles/blocks/span/span.scss";
 @import "../styles/blocks/gallery/gallery.scss";
 @import "../styles/blocks/slider/slider.scss";
 @import "../styles/blocks/link-press/link-press.scss";
