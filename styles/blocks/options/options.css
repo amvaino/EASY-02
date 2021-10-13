@@ -41,6 +41,7 @@
   font-size: 16px;
   line-height: 20px;
   padding-bottom: 6px;
+  font-weight: 300;
 }
 .options__li:last-child {
   padding-bottom: 0;
