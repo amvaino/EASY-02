@@ -135,12 +135,17 @@
             min-height: 52px;
             margin-top: 260px;
             margin-left: 510px;
+            top: 136px;
+            left: 48px;
         }
         &__item {
-            margin: 50px;
+            margin: 0;
             font-size: 30px;
             line-height: 42px;
             font-weight: 300;
+            p {
+                margin-left: 50px;
+            }
         }
     }
 }

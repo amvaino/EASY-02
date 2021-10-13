@@ -61,11 +61,16 @@
     .lead {
         max-width: 1440px;
         grid-template-columns: 50% auto;
+        grid-template-rows: 58px 270px 58px 124px;
         padding-top: 150px;
-        padding-bottom: 150px;
+        padding-bottom: 179px;
+
         &__title {
-            margin-top: 5px;
-            margin-bottom: 30px;
+            padding-top: 0;
+            margin-top: 30px;
+            margin-bottom: 21px;
+            grid-column: 1/2;
+            grid-row: 2/3;
         }
         &__img {
             grid-column: 2/3;
@@ -78,6 +83,13 @@
         &__paragraph {
             margin: 0;
             margin-top: 30px;
+            grid-column: 1/2;
+        }
+        &__btn {
+            max-height: 64px;
+            margin-top: 60px;
+            grid-row: 4/5;
+            grid-column: 1/2;
         }
     }
 }

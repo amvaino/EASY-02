@@ -142,11 +142,10 @@
     .subscription {
         border-right: 1px solid;
         &__title {
-            padding-top: 50px;
+            padding-top: 0;
+            letter-spacing: 1px;
         }
         &__text {
-            padding-left: 50px;
-            padding-top: 16px;
             font-size: 19px;
             line-height: 28px;
         }
