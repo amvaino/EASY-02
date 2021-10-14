@@ -573,7 +573,7 @@ template {
   .title-section {
     font-size: 46px;
     line-height: 46px;
-    font-weight: 300;
+    font-weight: 400;
     margin-left: 50px;
   }
 }
@@ -844,7 +844,6 @@ template {
     margin-left: 50px;
   }
   .options__li {
-    font-weight: 300;
     font-size: 22px;
     line-height: 32px;
     padding: 0;
@@ -866,7 +865,7 @@ template {
   }
 }
 .span {
-  font-weight: 400;
+  font-weight: bold;
 }
 
 .gallery {
@@ -875,6 +874,7 @@ template {
 .gallery__title {
   font-size: 26px;
   line-height: 26px;
+  font-weight: 400;
 }
 .gallery__nav {
   display: flex;
@@ -965,7 +965,6 @@ template {
   .gallery__title {
     font-size: 46px;
     line-height: 46px;
-    font-weight: 300;
     padding-left: 30px;
     padding-top: 0;
   }
@@ -1020,7 +1019,6 @@ template {
     margin-top: 50px;
     margin-bottom: 50px;
     padding-left: 0;
-    font-weight: 400;
   }
   .gallery__slider {
     margin: 0;
@@ -1161,11 +1159,19 @@ template {
   padding-bottom: 46px;
   position: relative;
   min-height: 220px;
-  /* Кружочки */
 }
 .link-press__content {
   display: block;
   position: relative;
+}
+.link-press__paragraph {
+  margin: 0 auto;
+  width: 280px;
+  max-height: 200px;
+  font-size: 16px;
+  line-height: 27px;
+  overflow: hidden;
+  font-weight: 400;
 }
 .link-press__item {
   -webkit-animation-name: fade;
@@ -1175,17 +1181,6 @@ template {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
-}
-.link-press__item p {
-  margin: 0 auto;
-  width: 280px;
-  max-height: 200px;
-  font-size: 16px;
-  line-height: 27px;
-  overflow: hidden;
-}
-.link-press li {
-  list-style-type: none;
 }
 .link-press__slider-dots {
   position: absolute;
@@ -1239,6 +1234,7 @@ template {
 }
 .link-press__title {
   display: none;
+  font-weight: 400;
 }
 
 @media screen and (min-width: 768px) {
@@ -1248,8 +1244,7 @@ template {
     display: block;
     min-height: 499px;
   }
-  .link-press__item p {
-    font-weight: 300;
+  .link-press__paragraph {
     font-size: 30px;
     line-height: 42px;
     min-width: 668px;
@@ -1297,13 +1292,14 @@ template {
     line-height: 42px;
     font-weight: 300;
   }
-  .link-press__item p {
+  .link-press__paragraph {
     margin-left: 50px;
   }
 }
 .subscription {
   grid-column: 1/2;
   grid-row: 1/3;
+  font-weight: 400;
 }
 .subscription__text {
   margin: 0;
@@ -1330,18 +1326,7 @@ template {
   padding: 0;
   cursor: pointer;
 }
-.subscription__form {
-  display: grid;
-  grid-template-columns: 140px 60px 80px;
-  grid-template-rows: 32px 32px;
-  justify-content: center;
-  justify-items: end;
-  align-content: stretch;
-  max-width: 280px;
-  margin: auto;
-  background-color: #e1fd2c;
-}
-.subscription__form input {
+.subscription__input {
   padding: 0;
   color: #e1fd2c;
   background-color: #191d2c;
@@ -1352,83 +1337,91 @@ template {
   letter-spacing: 1px;
   border: 1px solid;
 }
-.subscription__form input[name=name] {
+.subscription__input_name {
   grid-column: 1/2;
   grid-row: 1/2;
-}
-.subscription__form input[name=surname] {
-  grid-column: 3/4;
-}
-.subscription__form input[name=e-mail] {
-  grid-column: 1/3;
-  grid-row: 2/3;
-}
-.subscription__form input[type=text] {
   width: 140px;
 }
-.subscription__form input[type=email] {
+.subscription__input_surname {
+  grid-column: 3/4;
+  width: 140px;
+}
+.subscription__input_e-mail {
+  grid-column: 1/3;
+  grid-row: 2/3;
   width: 200px;
 }
-.subscription__form input[type=text]::-moz-placeholder {
+.subscription__input_e-mail::-moz-placeholder {
   color: #e1fd2c;
 }
-.subscription__form input[type=text]:-ms-input-placeholder {
+.subscription__input_e-mail:-ms-input-placeholder {
   color: #e1fd2c;
 }
-.subscription__form input[type=text]::placeholder {
+.subscription__input_e-mail::placeholder {
   color: #e1fd2c;
 }
-.subscription__form input:focus-visible {
+.subscription__input::-moz-placeholder {
+  color: #e1fd2c;
+}
+.subscription__input:-ms-input-placeholder {
+  color: #e1fd2c;
+}
+.subscription__input::placeholder {
+  color: #e1fd2c;
+}
+.subscription__input:focus-visible {
   outline: none;
 }
-.subscription__form input[type=email]::-moz-placeholder {
-  color: #e1fd2c;
-}
-.subscription__form input[type=email]:-ms-input-placeholder {
-  color: #e1fd2c;
-}
-.subscription__form input[type=email]::placeholder {
-  color: #e1fd2c;
-}
-.subscription__form input::-webkit-input-placeholder {
+.subscription__input::-webkit-input-placeholder {
   opacity: 1;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
-.subscription__form input::-moz-placeholder {
+.subscription__input::-moz-placeholder {
   opacity: 1;
   -moz-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
-.subscription__form input:-moz-placeholder {
+.subscription__input:-moz-placeholder {
   opacity: 1;
   -moz-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
-.subscription__form input:-ms-input-placeholder {
+.subscription__input:-ms-input-placeholder {
   opacity: 1;
   -ms-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
-.subscription__form input:focus::-webkit-input-placeholder {
+.subscription__input:focus::-webkit-input-placeholder {
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
-.subscription__form input:focus::-moz-placeholder {
+.subscription__input:focus::-moz-placeholder {
   opacity: 0;
   -moz-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
-.subscription__form input:focus:-moz-placeholder {
+.subscription__input:focus:-moz-placeholder {
   opacity: 0;
   -moz-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
-.subscription__form input:focus:-ms-input-placeholder {
+.subscription__input:focus:-ms-input-placeholder {
   opacity: 0;
   -ms-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+}
+.subscription__form {
+  display: grid;
+  grid-template-columns: 140px 60px 80px;
+  grid-template-rows: 32px 32px;
+  justify-content: center;
+  justify-items: end;
+  align-content: stretch;
+  max-width: 280px;
+  margin: auto;
+  background-color: #e1fd2c;
 }
 
 @media screen and (min-width: 768px) {
@@ -1452,10 +1445,13 @@ template {
     margin-top: 64px;
     margin-bottom: 50px;
   }
-  .subscription__form input[type=text] {
+  .subscription__input_name {
     width: 170px;
   }
-  .subscription__form input[type=email] {
+  .subscription__input_surname {
+    width: 170px;
+  }
+  .subscription__input_e-mail {
     width: 260px;
   }
 }

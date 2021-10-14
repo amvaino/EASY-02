@@ -169,26 +169,30 @@
             <section class="subscription">
                 <h3 class="title-section subscription__title">Подписка</h3>
                 <p class="subscription__text">На новые спецвыпуски машин.</p>
-                <form class="subscription__form" name="edit-profile">
+                <form
+                    class="subscription__form"
+                    name="edit-profile"
+                    onsubmit="return false"
+                >
                     <input
-                        class="subscription__form_name"
+                        class="subscription__input_name subscription__input"
                         name="name"
                         type="text"
                         placeholder="ИМЯ"
                     />
                     <input
-                        class="subscription__surname"
+                        class="subscription__input_surname subscription__input"
                         name="surname"
                         type="text"
                         placeholder="ФАМИЛИЯ"
                     />
                     <input
-                        class="subscription__e-mail"
+                        class="subscription__input_e-mail subscription__input"
                         name="e-mail"
                         type="email"
                         placeholder="ПОЧТА"
                     />
-                    <button type="button" class="subscription__button">
+                    <button type="submit" class="subscription__button">
                         подписка
                     </button>
                 </form>

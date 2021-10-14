@@ -3,6 +3,7 @@
     &__title {
         font-size: 26px;
         line-height: 26px;
+        font-weight: 400;
     }
     &__nav {
         display: flex;
@@ -95,7 +96,6 @@
         &__title {
             font-size: 46px;
             line-height: 46px;
-            font-weight: 300;
             padding-left: 30px;
             padding-top: 0;
         }
@@ -151,7 +151,6 @@
             margin-top: 50px;
             margin-bottom: 50px;
             padding-left: 0;
-            font-weight: 400;
         }
         &__slider {
             margin: 0;

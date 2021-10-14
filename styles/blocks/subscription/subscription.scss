@@ -1,6 +1,7 @@
 .subscription {
     grid-column: 1/2;
     grid-row: 1/3;
+    font-weight: 400;
     &__text {
         margin: 0;
         font-size: 14px;
@@ -26,6 +27,72 @@
         padding: 0;
         cursor: pointer;
     }
+    &__input {
+        padding: 0;
+        color: $contentColor;
+        background-color: $BGcolor;
+        padding-left: 11px;
+        box-sizing: border-box;
+        font-size: 9px;
+        line-height: 18px;
+        letter-spacing: 1px;
+        border: 1px solid;
+        &_name {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            width: 140px;
+        }
+        &_surname {
+            grid-column: 3/4;
+            width: 140px;
+        }
+        &_e-mail {
+            grid-column: 1/3;
+            grid-row: 2/3;
+            width: 200px;
+            &::placeholder {
+                color: $contentColor;
+            }
+        }
+        &::placeholder {
+            color: $contentColor;
+        }
+        &:focus-visible {
+            outline: none;
+        }
+        &::-webkit-input-placeholder {
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+        &::-moz-placeholder {
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+        &:-moz-placeholder {
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+        &:-ms-input-placeholder {
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+        &:focus::-webkit-input-placeholder {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        &:focus::-moz-placeholder {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        &:focus:-moz-placeholder {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        &:focus:-ms-input-placeholder {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+    }
     &__form {
         display: grid;
         grid-template-columns: 140px 60px 80px;
@@ -36,75 +103,6 @@
         max-width: 280px;
         margin: auto;
         background-color: $contentColor;
-        input {
-            padding: 0;
-            color: $contentColor;
-            background-color: $BGcolor;
-            padding-left: 11px;
-            box-sizing: border-box;
-            font-size: 9px;
-            line-height: 18px;
-            letter-spacing: 1px;
-            border: 1px solid;
-            &[name="name"] {
-                grid-column: 1/2;
-                grid-row: 1/2;
-            }
-            &[name="surname"] {
-                grid-column: 3/4;
-            }
-            &[name="e-mail"] {
-                grid-column: 1/3;
-                grid-row: 2/3;
-            }
-            &[type="text"] {
-                width: 140px;
-            }
-            &[type="email"] {
-                width: 200px;
-            }
-            &[type="text"]::placeholder {
-                color: $contentColor;
-            }
-            &:focus-visible {
-                outline: none;
-            }
-            &[type="email"]::placeholder {
-                color: $contentColor;
-            }
-            &::-webkit-input-placeholder {
-                opacity: 1;
-                transition: opacity 0.3s ease;
-            }
-            &::-moz-placeholder {
-                opacity: 1;
-                transition: opacity 0.3s ease;
-            }
-            &:-moz-placeholder {
-                opacity: 1;
-                transition: opacity 0.3s ease;
-            }
-            &:-ms-input-placeholder {
-                opacity: 1;
-                transition: opacity 0.3s ease;
-            }
-            &:focus::-webkit-input-placeholder {
-                opacity: 0;
-                transition: opacity 0.3s ease;
-            }
-            &:focus::-moz-placeholder {
-                opacity: 0;
-                transition: opacity 0.3s ease;
-            }
-            &:focus:-moz-placeholder {
-                opacity: 0;
-                transition: opacity 0.3s ease;
-            }
-            &:focus:-ms-input-placeholder {
-                opacity: 0;
-                transition: opacity 0.3s ease;
-            }
-        }
     }
 }
 @media screen and (min-width: 768px) {
@@ -126,13 +124,16 @@
             margin-left: 80px;
             margin-top: 64px;
             margin-bottom: 50px;
-            input {
-                &[type="text"] {
-                    width: 170px;
-                }
-                &[type="email"] {
-                    width: 260px;
-                }
+        }
+        &__input {
+            &_name {
+                width: 170px;
+            }
+            &_surname {
+                width: 170px;
+            }
+            &_e-mail {
+                width: 260px;
             }
         }
     }
