@@ -764,12 +764,6 @@ template {
 .options__plus {
   border-bottom: 1px solid;
 }
-.options__minus-li:before {
-  content: "-";
-}
-.options__plus-li::before {
-  content: "+";
-}
 .options__list {
   margin-bottom: 20px;
   padding: 0;
@@ -784,6 +778,12 @@ template {
 }
 .options__li:last-child {
   padding-bottom: 0;
+}
+.options__li_type_plus::before {
+  content: "+";
+}
+.options__li_type_minus:before {
+  content: "-";
 }
 
 @media screen and (min-width: 768px) {

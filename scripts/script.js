@@ -1,4 +1,6 @@
 const subscriptionButton = document.querySelector(".subscription__button"); //находим кнопку "Подписка"
+const sliderLeft = document.querySelector(".gallery__arrow_left"); //стрелка слайдер влево
+const sliderRight = document.querySelector(".gallery__arrow_right"); //стрелка слайдер вправо
 subscriptionButton.addEventListener("click", (event) => {
     if (subscriptionButton.innerHTML == "готово!") {
         subscriptionButton.innerHTML = "подписка";
@@ -40,4 +42,9 @@ function showSlides(n) {
     }
     slides[slideIndex - 1].style.display = "flex";
 }
-/* Основная функция 2 ого слайдера */
+sliderLeft.onclick = function () {
+    onclick = minusSlide();
+};
+sliderRight.onclick = function () {
+    onclick = plusSlide();
+};

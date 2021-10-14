@@ -24,12 +24,6 @@
     &__plus {
         border-bottom: 1px solid;
     }
-    &__minus-li:before {
-        content: "-";
-    }
-    &__plus-li::before {
-        content: "+";
-    }
     &__list {
         margin-bottom: 20px;
         padding: 0;
@@ -43,6 +37,12 @@
         font-weight: 300;
         &:last-child {
             padding-bottom: 0;
+        }
+        &_type_plus::before {
+            content: "+";
+        }
+        &_type_minus:before {
+            content: "-";
         }
     }
 }
