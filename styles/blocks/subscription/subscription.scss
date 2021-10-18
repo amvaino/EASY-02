@@ -1,0 +1,154 @@
+.subscription {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    font-weight: 400;
+    &__text {
+        margin: 0;
+        font-size: 14px;
+        line-height: 14px;
+        margin: 0 auto 60px 20px;
+    }
+    &__title {
+        font-size: 26px;
+        line-height: 26px;
+        margin: 21px auto 14px 20px;
+    }
+    &__button {
+        font-size: 10px;
+        line-height: 13px;
+        letter-spacing: 1px;
+        min-width: 80px;
+        color: #191d2c;
+        background-color: $contentColor;
+        border: 0;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+        cursor: pointer;
+    }
+    &__input {
+        padding: 0;
+        color: $contentColor;
+        background-color: $BGcolor;
+        padding-left: 11px;
+        box-sizing: border-box;
+        font-size: 9px;
+        line-height: 18px;
+        letter-spacing: 1px;
+        border: 1px solid;
+        &_name {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            width: 140px;
+        }
+        &_surname {
+            grid-column: 3/4;
+            width: 140px;
+        }
+        &_e-mail {
+            grid-column: 1/3;
+            grid-row: 2/3;
+            width: 200px;
+            &::placeholder {
+                color: $contentColor;
+            }
+        }
+        &::placeholder {
+            color: $contentColor;
+        }
+        &:focus-visible {
+            outline: none;
+        }
+        &::-webkit-input-placeholder {
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+        &::-moz-placeholder {
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+        &:-moz-placeholder {
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+        &:-ms-input-placeholder {
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+        &:focus::-webkit-input-placeholder {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        &:focus::-moz-placeholder {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        &:focus:-moz-placeholder {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        &:focus:-ms-input-placeholder {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+    }
+    &__form {
+        display: grid;
+        grid-template-columns: 140px 60px 80px;
+        grid-template-rows: 32px 32px;
+        justify-content: center;
+        justify-items: end;
+        align-content: stretch;
+        max-width: 280px;
+        margin: auto;
+        background-color: $contentColor;
+    }
+}
+@media screen and (min-width: 768px) {
+    .subscription {
+        min-width: 100%;
+        &__title {
+            font-size: 46px;
+            line-height: 46px;
+            padding: 0;
+            margin: 50px auto 16px 50px;
+        }
+        &__text {
+            font-size: 19px;
+            line-height: 28px;
+            margin: 0 auto 64px 50px;
+        }
+        &__form {
+            grid-template-columns: 170px 90px 80px;
+            margin-left: 80px;
+            margin-top: 64px;
+            margin-bottom: 50px;
+        }
+        &__input {
+            &_name {
+                width: 170px;
+            }
+            &_surname {
+                width: 170px;
+            }
+            &_e-mail {
+                width: 260px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .subscription {
+        border-right: 1px solid;
+        &__title {
+            padding-top: 0;
+            letter-spacing: 1px;
+        }
+        &__text {
+            font-size: 19px;
+            line-height: 28px;
+        }
+    }
+}

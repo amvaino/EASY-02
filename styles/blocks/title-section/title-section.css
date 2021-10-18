@@ -1,0 +1,13 @@
+.title-section {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 1440px) {
+  .title-section {
+    font-size: 46px;
+    line-height: 46px;
+    font-weight: 400;
+    margin-left: 50px;
+  }
+}/*# sourceMappingURL=title-section.css.map */

@@ -1,0 +1,142 @@
+.link-press {
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    padding-top: 20px;
+    padding-bottom: 46px;
+    position: relative;
+    min-height: 220px;
+    &__content {
+        display: block;
+        position: relative;
+    }
+    &__paragraph {
+        margin: 0 auto;
+        width: 280px;
+        max-height: 200px;
+        font-size: 16px;
+        line-height: 27px;
+        overflow: hidden;
+        font-weight: 300;
+    }
+    &__item {
+        animation-name: fade;
+        animation-duration: 1.5s;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    &__slider-dots {
+        position: absolute;
+        z-index: 5;
+        top: 438px;
+        left: 771px;
+    }
+    &__slider-dots-item {
+        cursor: pointer;
+        position: absolute;
+        top: 233px;
+        left: 20px;
+        height: 12px;
+        width: 12px;
+        margin: 0 2px;
+        background-color: $BGcolor;
+        border: 1px solid;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease-in-out;
+        z-index: 2;
+        &[for="tab-btn-2"] {
+            margin-left: 26px;
+        }
+        &:hover {
+            background-color: $contentColor;
+        }
+        &:active {
+            background-color: $contentColor;
+        }
+    }
+    &__btn {
+        position: absolute;
+        text-decoration: none;
+        color: $contentColor;
+        font-size: 14px;
+        line-height: 42px;
+        border: 1px solid;
+        width: 88px;
+        height: 42px;
+        border-radius: 100px/50px;
+        text-align: center;
+        display: block;
+        top: 204px;
+        left: 213px;
+        &:hover {
+            background-color: $contentColor;
+            color: $BGcolor;
+            transition: background-color 0.6s ease-in-out;
+        }
+    }
+    &__title {
+        display: none;
+        font-weight: 400;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .link-press {
+        padding-top: 0;
+        padding-bottom: 0;
+        display: block;
+        min-height: 499px;
+        &__paragraph {
+            font-size: 30px;
+            line-height: 42px;
+            min-width: 668px;
+            padding-top: 50px;
+        }
+        &__slider-dots-item {
+            top: 437px;
+            left: 50px;
+        }
+        &__btn {
+            top: 398px;
+            left: 608px;
+            font-size: 19px;
+            line-height: 50px;
+            width: 110px;
+            height: 52px;
+        }
+    }
+}
+@media screen and (min-width: 1440px) {
+    .link-press {
+        display: grid;
+        grid-template-columns: 50% auto;
+        &__title {
+            display: block;
+            padding-top: 50px;
+        }
+        &__content {
+            border-left: 1px solid;
+            min-height: 500px;
+        }
+        &__btn {
+            font-size: 19px;
+            line-height: 48px;
+            min-width: 110px;
+            min-height: 52px;
+            margin-top: 260px;
+            margin-left: 510px;
+            top: 136px;
+            left: 48px;
+        }
+        &__item {
+            margin: 0;
+            font-size: 30px;
+            line-height: 42px;
+            font-weight: 300;
+        }
+        &__paragraph {
+            margin-left: 50px;
+        }
+    }
+}
